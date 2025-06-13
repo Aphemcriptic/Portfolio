@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Ceci est le portfolio de Johan BARDET - Développeur Web Full-Stack.">
+
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/script.js" defer> </script>
+
+  <title>Portfolio de Johan BARDET</title>
+
+</head>
+
+
+
+<body>
+  <header title="Menu">
+    <nav>
+      <ul class="list-no-style" id="nav-list">
+        <li><a href=#apropos onclick="closeMenu()"> A propos</a></li>
+        <li><a href=#tech onclick="closeMenu()"> Technologies</a></li>
+        <li><a href=#projets onclick="closeMenu()"> Projets</a></li>
+        <li><a href=#contacts onclick="closeMenu()"> Contacts</a></li>
+      </ul>
+
+      <a href="javascript:void(0);" class="burger" onclick="burgerOpen()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <div title="Apropos scroll-container" class="scroll align-center">
+      <section id="apropos">
+        <section id="first-section">
+
+
+          <section id="bonjour">
+            <p>Bonjour, je suis Johan BARDET,
+              <br> <strong>Développeur web Full Stack</strong>.
+            </p>
+          </section>
+
+          <img id="profil-pic" src="images/photo-jb.jpg" alt="image JB" height="100em" />
+
+        </section>
+
+        <p id="introduction">Passionné par les nouvelles technologies, je me suis orienté dans le domaine de
+          l’informatique. Dans ce cadre, je recherche une alternance
+          au poste de développeur web Full-Stack (Bac +2) pour une période de 1 an avec un rythme d'une semaine en
+          formation et trois semaines en
+          entreprise par mois.</p>
+      </section>
+
+    </div>
+
+
+    <div title="Technologies scroll-container" id="tech" class="scroll align-center">
+
+        <h1>Technologies</h1>
+
+        <ul id="logo-tech" class="list-no-style">
+
+          <li><img src="images/logo-tech/logo-html.png" alt ="logo-html" class="logo-tech" /></li>
+          <li><img src="images/logo-tech/logo-css.png" alt ="logo-css" class="logo-tech" /></li>
+          <li><img src="images/logo-tech/lofo-JS.png" alt ="logo-JS" class="logo-tech" /></li>
+          <li><img src="images/logo-tech/logo-git.png" alt ="logo-git" class="logo-tech" /></li>
+          <li><img src="images/logo-tech/node-js-icon.png" alt ="logo-node-js" class="logo-tech" /></li>
+          <li><img src="images/logo-tech/React-icon.svg.png" alt ="logo-react" class="logo-tech" /></li>
+          <li><img src="images/logo-tech/Python-logo.png" alt ="logo-python" class="logo-tech" /></li>
+          <li><img src="images/logo-tech/PowerShell_5.0_icon.png" alt ="logo-powershell" class="logo-tech" /></li>
+          <li><img src="images/logo-tech/Gnu-bash-logo.png" alt ="logo-bash" class="logo-tech"/></li>
+
+        </ul>
+
+    </div>
+
+    <div title="Projets scroll-container" class="scroll align-center">
+      
+      <h1>Projets</h1>
+
+      <section id="projets">
+
+        <section class="projets">Modélisation de diffusion : 1ère année de prépa <img src="images/logo-tech/Python-logo.png" class="logo-tech-projets" alt="logo Python"/><a href="https://github.com/Aphemcriptic/ProjetPr-pa"><img src="images/Projets/prépa/1700.png"
+          class="img-projets" alt="graphe de la modélisation de diffusion" /></a></section>
+        <section class="projets"> Pokédex avec pokebuildapi <img src="images/logo-tech/React-icon.svg.png" class="logo-tech-projets" alt="logo React"><a href="https://github.com/Aphemcriptic/PokedexReact"><img src="images/Projets/pokemons.png" class="img-projets" alt="image du pokedex"/></a>
+        </section>
+        <section class="projets"> Site de recette avec les fonctionnalités d'authentification et d'édition <img src="images/logo-tech/React-icon.svg.png"  class="logo-tech-projets" alt="logo React">
+          <img src="images/logo-tech/node-js-icon.png"  class="logo-tech-projets" alt="logo Node JS">
+          <a href="https://github.com/Aphemcriptic/Les_Recettes_Faciles"><img src="images/Projets/Site_de_recette.png" class="img-projets" alt="Image du site de recette" /></a>
+        </section>
+        <!-- <section class="projets"> projet 4 <img src="" alt=""><a href=""><img src="images/Projets/" class="img-projets" /></a>
+        </section>
+        <section class="projets"> projet 5 <img src="" alt=""><a href=""><img src="images/Projets/" class="img-projets" /></a>
+        </section>
+        <section class="projets"> projet 6 <img src="" alt=""><a href=""><img src="images/Projets/" class="img-projets" /></a>
+        </section> -->
+
+      </section>
+
+    </div>
+
+    <div title="Contacts scroll-container" id="contacts" class="scroll align-center">
+
+      <section id="contacts-left">
+        <h1>Contacts</h1>
+
+        <ul id="list-contacts" class="list-no-style">
+
+          <li><img src="images/logo-contacts/logo-mail.png" class="logo-contacts" /> <a
+              href="mailto:johanbardet.info@gmail.com">En envoyer un mail</a></li>
+          <li><img src="images/logo-contacts/logo-linkedin.png" class="logo-contacts" /><a
+              href="https://www.linkedin.com/in/johan-bardet/">Profil LinkedIn</a></li>
+          <li><img src="images/logo-contacts/logo-doc.png" class="logo-contacts" /> <a
+              href="images/cv/CV_Johan_Bardet_Developpeur_Full_Stack.pdf" target="_blank"
+              rel="noopener noreferrer">CV-Johan-Bardet.pdf</a></li>
+
+        </ul>
+      </section>
+
+      <section id="contacts-right">
+        <form action="https://api.web3forms.com/submit" method="POST" id="form-contact" autocomplete="on">
+
+          <input type="hidden" name="access_key" value="2ed3fa9f-efff-4bbf-9bda-9ce264ca23ea">
+
+          <div>
+            <label for="Name">Nom: </label>
+            <input type="text" name="Nom" id="name" required placeholder="Veuillez entrer votre nom ici."/>
+          </div>
+
+          <div>
+            <label for="Email">Email: </label>
+            <input type="email" name="Email" id="email" required placeholder="Veuillez entrer votre email ici."/>
+          </div>
+
+          <div> 
+            <label for="Message">Message: </label>
+            <textarea type="text" name="Message" placeholder="Veuillez entrer votre message ici."></textarea>
+          </div>
+
+
+          <div id="contact-submit">
+            <input type="submit" value="Envoyer" />
+          </div>
+
+        </form>
+      </section>
+
+      </p>
+    </div>
+
+
+  </main>
+
+
+
+</body>
+
+
+</html>

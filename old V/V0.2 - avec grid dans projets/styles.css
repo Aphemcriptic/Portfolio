@@ -1,0 +1,638 @@
+:root {
+    font-size: 11px;
+    --bordure: 1px solid var(--secondary);
+    --primary: rgb(18, 16, 32);
+    --secondary: rgba(0, 0, 0, 0.8);
+    --primary-text-color: rgb(203, 202, 202);
+    --secondary-text-color: rgba(117, 184, 243, 0.729);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--primary) ;
+
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    overflow: scroll;
+}
+
+body {
+    color: var(--primary-text-color);
+    margin: 0;
+    padding: 0;
+    font: 1em/100% Helvetica, Arial, sans-serif;
+    text-align: justify;
+}
+
+/******************************** Header *************************************/
+
+header {
+    background-color: var(--secondary);
+    position: sticky;
+    top: 0;
+    text-align: center;
+    height: 4rem;
+    width: 100%;
+    align-content: center;
+
+}
+
+nav{
+    overflow: hidden;
+    background-color: var(--secondary);
+}
+
+nav ul{
+    display: none;
+    overflow: hidden;
+}
+
+a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
+nav a:hover {
+    background: #0000002c;
+    box-shadow: inset 0 0 10px 1px rgb(86, 86, 86);
+}
+
+.list-no-style {
+    list-style: none;
+}
+
+.burger {
+    background: var(--secondary);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    background-color: #000000;
+    color: white;
+  }
+
+.burger i{
+    font-style: 200em;
+}
+
+/************************* Main *****************************/
+
+main {
+    padding: 8px;
+
+    margin: 0;
+    align-items: center;
+    background: radial-gradient(var(--primary),rgba(61, 58, 81, 0.365));
+}
+
+main div {
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+
+    align-content: center;
+
+    max-height: fit-content;
+    padding-top: 4rem;
+    padding-bottom: 6%;
+
+
+    overflow-y: clip;
+    max-width: 100%;
+
+    align-items: center;
+
+}
+
+main div h1 {
+    text-align: center;
+    padding-bottom: 0.1em;
+    font-weight: 800;
+    color: var(--secondary-text-color);
+    font-size: 2.2em;
+}
+
+.scroll {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    height: 100vh;
+    margin-bottom: 15vh;
+    margin-top: 10vh;
+    overflow-y: clip;
+
+}
+
+/************************** A propos *****************************/
+
+#bonjour {
+    color: var(--secondary-text-color);
+    font-size: 2em;
+    max-width: 85vh;
+    font-weight: bold;
+    line-height: 1em;
+    text-align: left;
+    padding-right: 0.5em;
+}
+
+
+#introduction {
+    background-color: rgba(0, 0, 0, 0.758);
+    border-radius: 0.3em;
+    padding: 0.8em;
+}
+
+
+#first-section {
+    align-items: center;
+
+    display: grid;
+
+    grid-template:
+        "a a b" 25%;
+    margin-top: 5em;
+    place-content: center;
+    justify-content: space-around;
+}
+
+
+#profil-pic {
+    padding: 0.4em;
+    border-radius: 10em;
+}
+
+/************************** Tech *****************************/
+
+#tech {
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    max-height: fit-content;
+
+}
+
+#logo-tech {
+    padding: 0;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(10px, 80%);
+    grid-gap: 1em;
+
+    align-items: center;
+    margin-top: 0.5em;
+
+
+}
+
+.logo-tech {
+    height: 10rem;
+    max-height: 20%;
+    margin: 0.8em;
+    max-width: 100%;
+    padding: 1em;
+
+}
+
+
+
+/************************** Projets *****************************/
+
+#projets {
+    /* display: grid;
+    grid-template: "a" auto;
+    grid-gap: 1em; */
+
+    display: flex;
+    flex-wrap: wrap;
+
+    /* max-width: 100%;*/
+    height:fit-content; 
+    align-content: center;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.projets {
+    border-radius: 1em;
+    background-color: rgba(0, 0, 0, 0.461);
+    /* height: 9em; */
+    min-width: 20em; 
+    padding: 0.8em;
+
+    margin:0.8em;
+    flex:1;
+    /* max-width: fit-content;
+    max-height: fit-content; */
+    justify-content: space-around;
+
+    margin-bottom: -0.5em; 
+
+    display: grid;
+    grid-template: " a b"
+    "c c";
+    justify-items: center;
+
+
+}
+
+.projets * {
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+    padding: 0.03em;
+}
+
+.projets a {
+    text-align: center;
+    overflow: hidden;
+}
+
+.projets a img {
+    max-height: 60%;
+    max-width: 100%;
+    border-radius: 0.3em;
+    opacity: 0.9;
+    
+}
+
+.projets a img:hover{
+    padding: 0;
+}
+
+.logo-tech-projets{
+    height: 4rem;
+    max-height: 20%;
+
+    animation-name: rotation;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function:cubic-bezier(1, 0, 0, 1); 
+}
+
+@keyframes rotation {
+    from {
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+
+/************************** Contacts *****************************/
+
+#contacts {
+
+    padding-top: 8vh;
+    justify-items: center;
+    justify-content: center;
+
+}
+
+
+#contacts-left {
+    max-width: 100%;
+    height: 30vh;
+    max-height: fit-content;
+    align-content: center;
+
+    margin-bottom: 5vh;
+}
+
+#list-contacts {
+    margin-top: 1em;
+    width: fit-content;
+}
+
+#list-contacts li {
+
+    display: grid;
+    grid-template: "a b c";
+
+    align-items: center;
+    margin-bottom: 0.6em;
+}
+
+.logo-contacts {
+    max-width: 6vh;
+    margin-right: 1.2rem;
+    margin-top: 0.1rem;
+
+}
+
+#contact-right{
+    margin: 5vh;
+
+}
+
+#form-contact {
+    border-radius: 1em;
+    background-color: rgba(0, 0, 0, 0.461);
+    padding: 1em;
+    margin: 3em;
+    max-width: 100%;
+}
+
+
+#form-contact div {
+    display: grid;
+    padding: 1vh;
+
+}
+
+#form-contact div label {
+    margin: 0.1vh;
+}
+
+#form-contact div input[type=text],
+[type=email],
+textarea {
+    background-color: rgba(172, 172, 172, 0.121);
+    border: 3px solid rgba(0, 0, 0, 0.299);
+    color: var(--primary-text-color);
+    padding: 0.2em;
+    width: 20em;
+}
+
+#form-contact div textarea {
+    /* height: max-content; */
+    overflow: scroll;
+    scrollbar-color: var(--primary) rgba(96, 95, 95, 0.249);
+    scrollbar-width: thin;
+    padding: 1em;
+    padding-bottom: 3em;
+}
+
+#form-contact div input[type=submit] {
+    /* width: 7em; */
+    height: 3em;
+    background-color: rgba(0, 0, 0, 0.299);
+    border: 3px solid var(--primary-text-color);
+    color: var(--primary-text-color);
+    font-weight: 800;
+    border-radius: 0.8em;
+}
+
+#contact-submit {
+    justify-content: center;
+}
+
+#form-contact div input[type=submit]:hover {
+    background: #0000002c;
+    box-shadow: inset 0 0 10px 1px rgb(86, 86, 86);
+}
+
+/************************** Responsive *****************************/
+
+@media screen and (min-width: 700px) {
+
+    :root {
+        font-size: 14px;
+    }
+
+
+
+    #profil-pic {
+        height: 10em;
+
+    }
+
+
+    
+    #logo-tech {
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        margin-top: 2em;
+    }
+    
+    .logo-tech {
+        max-height: 8rem;
+    
+    }
+
+
+    .logo-contacts {
+        max-width: 5vh;
+   
+    }
+    
+    /* #projets{
+        grid-template: "a b" auto;
+        margin: 0;
+    }
+
+    .projets{
+        height: 25vh;
+        margin: 0; 
+    } */
+
+    #contacts-left {
+        max-width: 100%;
+        height: 20vh;
+        max-height: fit-content;
+        align-content: center;
+    
+        margin-bottom: 18vh;
+    }
+
+    #form-contact div input[type=text],
+    [type=email],
+    textarea {
+        width: 40em;
+    }
+
+    #form-contact div
+    textarea {
+    height: 10m;}
+}
+
+@media screen and (min-width: 800px) {
+
+    #profil-pic {
+        height: 12em;
+
+    }
+
+/* 
+    .projets{
+        height: 35vh;
+    }
+
+    #projets{
+        grid-template: "a b c" auto;
+    } */
+
+
+}
+
+@media screen and (min-width: 900px) {
+
+    #form-contact div input[type=text],
+    [type=email],
+    textarea {
+        width: 40em;
+    }
+
+    #form-contact div
+    textarea {
+    height: 12em;}
+
+
+
+}
+
+@media screen and (min-width: 1000px) {
+
+    /***************** Alternative nav ********************/
+
+    nav{overflow: auto;}
+
+    nav ul {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        text-transform: uppercase;
+    }
+    
+    nav ul li {
+        flex: 1;
+    }
+    
+    nav ul a {
+        border-right: 1px solid rgba(0, 0, 0, .3);
+        color: var(--primary-text-color);
+        padding: 12px 20px;
+        text-decoration: none;
+        border-radius: 0.3em;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        word-spacing: 0.3em;
+    }
+
+    .burger{display: none;}
+
+    /************************************************************************/
+
+    #profil-pic {
+        height: 15em;
+    }
+/* 
+    #projets{
+        grid-template: "a b c" auto;
+        } */
+
+    #form-contact div input[type=text],
+    [type=email],
+    textarea {
+        width: 55em;
+    }
+
+    #form-contact div
+    textarea {
+    height: 10em;}
+
+    .logo-contacts {
+        max-width: 7.5vh;
+   
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    :root {
+        font-size: 16px;
+    }
+
+    #profil-pic {
+        height: 18em;
+
+    }
+
+    #contacts {
+        padding-top: 7rem;
+        display: flex;
+        margin: 0 8em;
+    
+    }
+
+    #contacts-right{
+        flex: 1;
+        margin-left: 5em;
+    }
+
+    #contacts-left{
+        flex: 0.5;
+    }
+
+    #form-contact div input[type=text],
+    [type=email],
+    textarea {
+        width: 100%;
+    }
+
+    #form-contact div
+    textarea {
+    height: 15em;}
+
+}
+
+@media screen and (min-width: 1400px) {
+
+    :root {
+        font-size: 18px;
+    }
+
+    #profil-pic {
+        height: 22em;
+
+    }
+
+    #form-contact div
+    textarea {
+    height: 20em;}
+
+}
+
+@media screen and (min-width: 1600px) {
+
+    :root {
+        font-size: 20px;
+    }
+
+
+
+}
+
+@media screen and (min-width: 1800px) {
+
+    #profil-pic {
+        height: 28em;
+    }
+
+
+    #form-contact div
+    textarea {
+    height: 25em;}
+
+}
+
+@media screen and (min-width: 2000px) {
+
+    :root {
+        font-size: 30px;
+    }
+
+
+    #form-contact div
+    textarea {
+    height: 45em;}
+
+}
